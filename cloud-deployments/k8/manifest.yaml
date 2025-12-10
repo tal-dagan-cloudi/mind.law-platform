@@ -2,7 +2,7 @@
 apiVersion: v1                                                                                                                                           
 kind: PersistentVolume                                                                                                                                   
 metadata:                                                                                                                                                
-  name: anything-llm-volume                                                                                                                              
+  name: mind-law-volume                                                                                                                              
   annotations:                                                                                                                                           
     pv.beta.kubernetes.io/uid: "1000"                                                                                                                    
     pv.beta.kubernetes.io/gid: "1000"                                                                                                                    
@@ -14,7 +14,7 @@ spec:
     - ReadWriteOnce                                                                                                                                      
   awsElasticBlockStore:    
     # This is the volume UUID from AWS EC2 EBS Volumes list.                                                                                                                              
-    volumeID: "{{ anythingllm_awsElasticBlockStore_volumeID }}"                                                                                                                           
+    volumeID: "{{ mindlaw_awsElasticBlockStore_volumeID }}"                                                                                                                           
     fsType: ext4
   nodeAffinity:                                                                                                                                          
     required:                                                                                                                                            
@@ -28,7 +28,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: anything-llm-volume-claim
+  name: mind-law-volume-claim
   namespace: "{{ namespace }}"
 spec:
   accessModes:
@@ -40,14 +40,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: anything-llm
+  name: mind-law
   namespace: "{{ namespace }}"
   labels:
-    anything-llm: "true"
+    mind-law: "true"
 spec:
   selector:
     matchLabels:
-      k8s-app: anything-llm
+      k8s-app: mind-law
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -57,10 +57,10 @@ spec:
   template:
     metadata:
       labels:
-        anything-llm: "true"
-        k8s-app: anything-llm
-        app.kubernetes.io/name: anything-llm
-        app.kubernetes.io/part-of: anything-llm
+        mind-law: "true"
+        k8s-app: mind-law
+        app.kubernetes.io/name: mind-law
+        app.kubernetes.io/part-of: mind-law
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/path: /metrics
@@ -83,7 +83,7 @@ spec:
                 values:                                                                                                                                                                                                                                                                  
                 - us-east-1c  
       containers:
-      - name: anything-llm
+      - name: mind-law
         resources:
           limits:
             memory: "1Gi"
@@ -92,7 +92,7 @@ spec:
             memory: "512Mi"
             cpu: "250m"
         imagePullPolicy: IfNotPresent
-        image: "mintplexlabs/anythingllm:render"
+        image: "mintplexlabs/mindlaw:render"
         securityContext:                     
           allowPrivilegeEscalation: true                                                                                                                                                                                                                                                 
           capabilities:                                                                                                                                                                                                                                                                  
@@ -159,18 +159,18 @@ spec:
           - name: GID
             value: "1000"
         volumeMounts: 
-          - name: anything-llm-server-storage-volume-mount
+          - name: mind-law-server-storage-volume-mount
             mountPath: /storage                                                                                                                                                  
       volumes:
-        - name: anything-llm-server-storage-volume-mount
+        - name: mind-law-server-storage-volume-mount
           persistentVolumeClaim:
-            claimName: anything-llm-volume-claim
+            claimName: mind-law-volume-claim
 ---
 # This serves the UI and the backend.
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: anything-llm-ingress
+  name: mind-law-ingress
   namespace: "{{ namespace }}"
   annotations:
     external-dns.alpha.kubernetes.io/hostname: "{{ namespace }}-chat.{{ base_domain }}"
@@ -186,7 +186,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: anything-llm-svc
+            name: mind-law-svc
             port: 
               number: 3001
   tls: # < placing a host in the TLS config will indicate a cert should be created
@@ -198,8 +198,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    kubernetes.io/name: anything-llm
-  name: anything-llm-svc
+    kubernetes.io/name: mind-law
+  name: mind-law-svc
   namespace: "{{ namespace }}"
 spec:
   ports:
@@ -211,4 +211,4 @@ spec:
     targetPort: 9090
     name: metrics
   selector:
-    k8s-app: anything-llm
+    k8s-app: mind-law
