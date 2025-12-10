@@ -6,7 +6,7 @@ ARG ARG_UID=1000
 ARG ARG_GID=1000
 
 FROM base AS build-arm64
-RUN echo "Preparing build of AnythingLLM image for arm64 architecture"
+RUN echo "Preparing build of Mind.Law image for arm64 architecture"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -38,27 +38,27 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Create a group and user with specific UID and GID
-RUN groupadd -g "$ARG_GID" anythingllm && \
-    useradd -l -u "$ARG_UID" -m -d /app -s /bin/bash -g anythingllm anythingllm && \
-    mkdir -p /app/frontend/ /app/server/ /app/collector/ && chown -R anythingllm:anythingllm /app
+RUN groupadd -g "$ARG_GID" mindlaw && \
+    useradd -l -u "$ARG_UID" -m -d /app -s /bin/bash -g mindlaw mindlaw && \
+    mkdir -p /app/frontend/ /app/server/ /app/collector/ && chown -R mindlaw:mindlaw /app
 
 # Copy docker helper scripts
 COPY ./docker/docker-entrypoint.sh /usr/local/bin/
 COPY ./docker/docker-healthcheck.sh /usr/local/bin/
-COPY --chown=anythingllm:anythingllm ./docker/.env.example /app/server/.env
+COPY --chown=mindlaw:mindlaw ./docker/.env.example /app/server/.env
 
 # Ensure the scripts are executable
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh && \
     chmod +x /usr/local/bin/docker-healthcheck.sh
 
-USER anythingllm
+USER mindlaw
 WORKDIR /app
 
 # Puppeteer does not ship with an ARM86 compatible build for Chromium
 # so web-scraping would be broken in arm docker containers unless we patch it
 # by manually installing a compatible chromedriver.
 RUN echo "Need to patch Puppeteer x Chromium support for ARM86 - installing dep!" && \
-    curl -fSL https://webassets.anythingllm.com/chromium-1088-linux-arm64.zip -o chrome-linux.zip && \
+    curl -fSL https://webassets.mindlaw.com/chromium-1088-linux-arm64.zip -o chrome-linux.zip && \
     unzip chrome-linux.zip && \
     rm -rf chrome-linux.zip
 
@@ -72,7 +72,7 @@ RUN echo "Done running arm64 specific installation steps"
 
 # amd64-specific stage
 FROM base AS build-amd64
-RUN echo "Preparing build of AnythingLLM image for non-ARM architecture"
+RUN echo "Preparing build of Mind.Law image for non-ARM architecture"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -104,14 +104,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Create a group and user with specific UID and GID
-RUN groupadd -g "$ARG_GID" anythingllm && \
-    useradd -l -u "$ARG_UID" -m -d /app -s /bin/bash -g anythingllm anythingllm && \
-    mkdir -p /app/frontend/ /app/server/ /app/collector/ && chown -R anythingllm:anythingllm /app
+RUN groupadd -g "$ARG_GID" mindlaw && \
+    useradd -l -u "$ARG_UID" -m -d /app -s /bin/bash -g mindlaw mindlaw && \
+    mkdir -p /app/frontend/ /app/server/ /app/collector/ && chown -R mindlaw:mindlaw /app
 
 # Copy docker helper scripts
 COPY ./docker/docker-entrypoint.sh /usr/local/bin/
 COPY ./docker/docker-healthcheck.sh /usr/local/bin/
-COPY --chown=anythingllm:anythingllm ./docker/.env.example /app/server/.env
+COPY --chown=mindlaw:mindlaw ./docker/.env.example /app/server/.env
 
 # Ensure the scripts are executable
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh && \
@@ -123,14 +123,14 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh && \
 
 # hadolint ignore=DL3006
 FROM build-${TARGETARCH} AS build
-RUN echo "Running common build flow of AnythingLLM image for all architectures"
+RUN echo "Running common build flow of Mind.Law image for all architectures"
 
-USER anythingllm
+USER mindlaw
 WORKDIR /app
 
 # Install & Build frontend layer
 FROM build AS frontend-build
-COPY --chown=anythingllm:anythingllm ./frontend /app/frontend/
+COPY --chown=mindlaw:mindlaw ./frontend /app/frontend/
 WORKDIR /app/frontend
 RUN yarn install --network-timeout 100000 && yarn cache clean
 RUN yarn build && \
@@ -143,24 +143,24 @@ WORKDIR /app
 # Install server layer
 # Also pull and build collector deps (chromium issues prevent bad bindings)
 FROM build AS backend-build
-COPY --chown=anythingllm:anythingllm ./server /app/server/
+COPY --chown=mindlaw:mindlaw ./server /app/server/
 WORKDIR /app/server
 RUN yarn install --production --network-timeout 100000 && yarn cache clean
 WORKDIR /app
 
 # Install collector dependencies
-COPY --chown=anythingllm:anythingllm ./collector/ ./collector/
+COPY --chown=mindlaw:mindlaw ./collector/ ./collector/
 WORKDIR /app/collector
 ENV PUPPETEER_DOWNLOAD_BASE_URL=https://storage.googleapis.com/chrome-for-testing-public
 RUN yarn install --production --network-timeout 100000 && yarn cache clean
 
 WORKDIR /app
-USER anythingllm
+USER mindlaw
 
 # Since we are building from backend-build we just need to move built frontend into server/public
 FROM backend-build AS production-build
 WORKDIR /app
-COPY --chown=anythingllm:anythingllm --from=frontend-build /app/frontend/dist /app/server/public
+COPY --chown=mindlaw:mindlaw --from=frontend-build /app/frontend/dist /app/server/public
 
 # Setup the environment
 ENV NODE_ENV=production

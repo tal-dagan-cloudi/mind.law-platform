@@ -1,12 +1,12 @@
-name: anythingllm
+name: mindlaw
 
 networks:
-  anything-llm:
+  mind-law:
     driver: bridge
 
 services:
-  anything-llm:
-    container_name: anythingllm
+  mind-law:
+    container_name: mindlaw
     build:
       context: ../.
       dockerfile: ./docker/Dockerfile
@@ -26,6 +26,6 @@ services:
     env_file:
       - .env
     networks:
-      - anything-llm
+      - mind-law
     extra_hosts:
       - "host.docker.internal:host-gateway"

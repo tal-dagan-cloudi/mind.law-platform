@@ -10,7 +10,7 @@ if [ -z "$STORAGE_DIR" ]; then
     echo "It can also result in weird errors in various parts of the application."
     echo ""
     echo "Please run the container with the official docker command at"
-    echo "https://docs.anythingllm.com/installation-docker/quickstart"
+    echo "https://docs.mindlaw.com/installation-docker/quickstart"
     echo ""
     echo "⚠️  ⚠️  ⚠️  WARNING: STORAGE_DIR environment variable is not set! ⚠️  ⚠️  ⚠️"
     echo "================================================================"
