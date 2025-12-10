@@ -25,9 +25,9 @@ export default function Introduction({ settings, setSettings, setStep }) {
               agent-skills, system prompts, slash commands, and more!
             </p>
             <p>
-              These items are created by the AnythingLLM team and community, and
-              are a great way to get started with AnythingLLM as well as extend
-              AnythingLLM in a way that is customized to your needs.
+              These items are created by the Mind.Law team and community, and
+              are a great way to get started with Mind.Law as well as extend
+              Mind.Law in a way that is customized to your needs.
             </p>
             <p>
               There are both <b>private</b> and <b>public</b> items in the

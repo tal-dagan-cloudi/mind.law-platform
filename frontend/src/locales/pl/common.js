@@ -8,7 +8,7 @@ const TRANSLATIONS = {
     llm: {
       title: "Preferencje modeli językowych",
       description:
-        "AnythingLLM może współpracować z wieloma dostawcami modeli językowych",
+        "Mind.Law może współpracować z wieloma dostawcami modeli językowych",
     },
     userSetup: {
       title: "Konfiguracja użytkownika",
@@ -37,15 +37,15 @@ const TRANSLATIONS = {
         "Ustawienia te można zmienić w dowolnym momencie w ustawieniach.",
     },
     survey: {
-      title: "Witamy w AnythingLLM",
+      title: "Witamy w Mind.Law",
       description:
-        "Pomóż nam stworzyć AnythingLLM dostosowany do Twoich potrzeb. Opcjonalnie.",
+        "Pomóż nam stworzyć Mind.Law dostosowany do Twoich potrzeb. Opcjonalnie.",
       email: "Jaki jest Twój adres e-mail?",
-      useCase: "Do czego będziesz używać AnythingLLM?",
+      useCase: "Do czego będziesz używać Mind.Law?",
       useCaseWork: "Do pracy",
       useCasePersonal: "Do użytku osobistego",
       useCaseOther: "Inne",
-      comment: "Skąd dowiedziałeś się o AnythingLLM?",
+      comment: "Skąd dowiedziałeś się o Mind.Law?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube itp. - Daj nam znać, jak nas znalazłeś!",
       skip: "Pomiń ankietę",
@@ -54,7 +54,7 @@ const TRANSLATIONS = {
     workspace: {
       title: "Utwórz swój pierwszy obszar roboczy",
       description:
-        "Stwórz swój pierwszy obszar roboczy i zacznij korzystać z AnythingLLM.",
+        "Stwórz swój pierwszy obszar roboczy i zacznij korzystać z Mind.Law.",
     },
   },
   common: {
@@ -133,7 +133,7 @@ const TRANSLATIONS = {
       title: "Pierwsze kroki",
       tasksLeft: "- zadania do wykonania",
       completed:
-        "Jesteś na najlepszej drodze do zostania ekspertem AnythingLLM!",
+        "Jesteś na najlepszej drodze do zostania ekspertem Mind.Law!",
       dismiss: "zamknij",
       tasks: {
         create_workspace: {
@@ -238,7 +238,7 @@ const TRANSLATIONS = {
       add: "Dodaj nową wiadomość",
       save: "Zapisz wiadomości",
       heading: "Wyjaśnij mi",
-      body: "Korzyści z AnythingLLM",
+      body: "Korzyści z Mind.Law",
     },
     pfp: {
       title: "Logo obszaru roboczego",
@@ -430,16 +430,16 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "Preferencje interfejsu użytkownika",
-      description: "Ustaw preferencje interfejsu użytkownika dla AnythingLLM.",
+      description: "Ustaw preferencje interfejsu użytkownika dla Mind.Law.",
     },
     branding: {
       title: "Branding i white-labeling",
       description:
-        "Oznakuj swoją instancję AnythingLLM niestandardowym brandingiem.",
+        "Oznakuj swoją instancję Mind.Law niestandardowym brandingiem.",
     },
     chat: {
       title: "Czat",
-      description: "Ustaw preferencje czatu dla AnythingLLM.",
+      description: "Ustaw preferencje czatu dla Mind.Law.",
       auto_submit: {
         title: "Automatyczne przesyłanie mowy",
         description: "Automatyczne przesyłanie mowy po wykryciu ciszy.",
@@ -481,7 +481,7 @@ const TRANSLATIONS = {
       "display-language": {
         title: "Język",
         description:
-          "Wybierz preferowany język interfejsu użytkownika AnythingLLM - jeśli dostępne są tłumaczenia.",
+          "Wybierz preferowany język interfejsu użytkownika Mind.Law - jeśli dostępne są tłumaczenia.",
       },
       logo: {
         title: "Logo",
@@ -500,7 +500,7 @@ const TRANSLATIONS = {
         system: "systemu",
         user: "użytkownika",
         message: "",
-        assistant: "Asystent czatu AnythingLLM",
+        assistant: "Asystent czatu Mind.Law",
         "double-click": "Kliknij dwukrotnie, aby edytować...",
         save: "Zapisz wiadomości",
       },
@@ -534,7 +534,7 @@ const TRANSLATIONS = {
   api: {
     title: "Klucze API",
     description:
-      "Klucze API umożliwiają dostęp do instancji AnythingLLM i zarządzanie nią.",
+      "Klucze API umożliwiają dostęp do instancji Mind.Law i zarządzanie nią.",
     link: "Przeczytaj dokumentację API",
     generate: "Generuj nowy klucz API",
     table: {
@@ -546,7 +546,7 @@ const TRANSLATIONS = {
   llm: {
     title: "Preferencje LLM",
     description:
-      "Tutaj skonfigurujesz dostawcę modeli językowych używanych do czatów i embeddingów. Upewnij się, że wszystkie klucze są aktualne i poprawne - bez tego AnythingLLM nie będzie działać.",
+      "Tutaj skonfigurujesz dostawcę modeli językowych używanych do czatów i embeddingów. Upewnij się, że wszystkie klucze są aktualne i poprawne - bez tego Mind.Law nie będzie działać.",
     provider: "Dostawca LLM",
     providers: {
       azure_openai: {
@@ -566,7 +566,7 @@ const TRANSLATIONS = {
       "Tutaj skonfigurujesz dostawcę modeli używanych do transkrypcji plików audio i wideo. Upewnij się, że klucze są poprawne - bez tego pliki audio nie będą transkrybowane.",
     provider: "Dostawca usług transkrypcji",
     "warn-start":
-      "Korzystanie z lokalnego modelu Whisper na komputerach z ograniczoną pamięcią RAM lub procesorem może spowodować przerwanie pracy AnythingLLM podczas przetwarzania plików multimedialnych.",
+      "Korzystanie z lokalnego modelu Whisper na komputerach z ograniczoną pamięcią RAM lub procesorem może spowodować przerwanie pracy Mind.Law podczas przetwarzania plików multimedialnych.",
     "warn-recommend":
       "Zalecana konfiguracja to co najmniej 2 GB pamięci RAM, przesyłaj pliki <10 MB.",
     "warn-end":
@@ -603,7 +603,7 @@ const TRANSLATIONS = {
   vector: {
     title: "Wektorowa baza danych",
     description:
-      "Tutaj skonfigurujesz wektorową bazę danych dla AnythingLLM. Upewnij się, że wszystkie ustawienia są poprawne.",
+      "Tutaj skonfigurujesz wektorową bazę danych dla Mind.Law. Upewnij się, że wszystkie ustawienia są poprawne.",
     provider: {
       title: "Wektorowa baza danych",
       description: "LanceDB nie wymaga żadnej konfiguracji.",
@@ -647,7 +647,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Prywatność i obsługa danych",
     description:
-      "Jest to konfiguracja sposobu, w jaki połączeni dostawcy zewnętrzni i AnythingLLM przetwarzają dane użytkownika.",
+      "Jest to konfiguracja sposobu, w jaki połączeni dostawcy zewnętrzni i Mind.Law przetwarzają dane użytkownika.",
     llm: "Wybór LLM",
     embedding: "Preferencje dotyczące osadzania",
     vector: "Wektorowa baza danych",
@@ -829,22 +829,22 @@ const TRANSLATIONS = {
       fetching: "Pobieranie...",
       "fetch-website": "Pobierz zawartość strony",
       "privacy-notice":
-        "Pliki zostaną przetworzone w obrębie danej instancji AnythingLLM. Pliki te nie będą udostępniane innym podmiotom.",
+        "Pliki zostaną przetworzone w obrębie danej instancji Mind.Law. Pliki te nie będą udostępniane innym podmiotom.",
     },
     pinning: {
       what_pinning: "Czym jest przypinanie dokumentów?",
       pin_explained_block1:
-        "Kiedy <b>przypinasz</b> dokument w AnythingLLM, dodamy całą zawartość dokumentu do okna promptu, aby LLM mógł w pełni zrozumieć jego treść.",
+        "Kiedy <b>przypinasz</b> dokument w Mind.Law, dodamy całą zawartość dokumentu do okna promptu, aby LLM mógł w pełni zrozumieć jego treść.",
       pin_explained_block2:
         "Działa to najlepiej w przypadku <b>dużych modeli kontekstowych</b> lub małych plików, które są krytyczne dla bazy wiedzy.",
       pin_explained_block3:
-        "Jeśli domyślnie nie otrzymujesz pożądanych odpowiedzi z AnythingLLM, przypinanie jest świetnym sposobem na uzyskanie wyższej jakości odpowiedzi za jednym kliknięciem.",
+        "Jeśli domyślnie nie otrzymujesz pożądanych odpowiedzi z Mind.Law, przypinanie jest świetnym sposobem na uzyskanie wyższej jakości odpowiedzi za jednym kliknięciem.",
       accept: "Ok, rozumiem",
     },
     watching: {
       what_watching: "Do czego służy oglądanie dokumentu?",
       watch_explained_block1:
-        "Podczas <b>obserwowania</b> dokumentu w AnythingLLM będziemy <i>automatycznie</i> synchronizować zawartość dokumentu z jego oryginalnym źródłem w regularnych odstępach czasu. Spowoduje to automatyczną aktualizację zawartości w każdym obszarze roboczym, w którym ten plik jest zarządzany.",
+        "Podczas <b>obserwowania</b> dokumentu w Mind.Law będziemy <i>automatycznie</i> synchronizować zawartość dokumentu z jego oryginalnym źródłem w regularnych odstępach czasu. Spowoduje to automatyczną aktualizację zawartości w każdym obszarze roboczym, w którym ten plik jest zarządzany.",
       watch_explained_block2:
         "Ta funkcja obsługuje obecnie treści online i nie będzie dostępna dla dokumentów przesyłanych ręcznie.",
       watch_explained_block3_start:
@@ -1045,7 +1045,7 @@ const TRANSLATIONS = {
         unauthenticated: {
           title: "Wymagane uwierzytelnienie",
           description:
-            "Przed opublikowaniem elementów należy uwierzytelnić się w centrum społeczności AnythingLLM.",
+            "Przed opublikowaniem elementów należy uwierzytelnić się w centrum społeczności Mind.Law.",
           button: "Połączenie z centrum społeczności",
         },
       },
@@ -1069,7 +1069,7 @@ const TRANSLATIONS = {
     password: {
       title: "Ochrona hasłem",
       description:
-        "Chroń swoją instancję AnythingLLM hasłem. Jeśli go zapomnisz, nie ma metody odzyskiwania, więc upewnij się, że zapisałeś to hasło.",
+        "Chroń swoją instancję Mind.Law hasłem. Jeśli go zapomnisz, nie ma metody odzyskiwania, więc upewnij się, że zapisałeś to hasło.",
       "password-label": "Hasło instancji",
     },
   },

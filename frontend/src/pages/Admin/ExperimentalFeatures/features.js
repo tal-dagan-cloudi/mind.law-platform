@@ -8,7 +8,7 @@ export const configurableFeatures = {
     key: "experimental_live_file_sync",
   },
   experimental_mobile_connections: {
-    title: "AnythingLLM Mobile",
+    title: "Mind.Law Mobile",
     href: paths.settings.mobileConnections(),
     key: "experimental_mobile_connections",
     autoEnabled: true,

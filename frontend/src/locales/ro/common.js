@@ -8,7 +8,7 @@ const TRANSLATIONS = {
     llm: {
       title: "Preferința LLM",
       description:
-        "AnythingLLM poate funcționa cu mai mulți furnizori LLM. Acesta va fi serviciul care gestionează conversațiile.",
+        "Mind.Law poate funcționa cu mai mulți furnizori LLM. Acesta va fi serviciul care gestionează conversațiile.",
     },
     userSetup: {
       title: "Configurare Utilizator",
@@ -37,15 +37,15 @@ const TRANSLATIONS = {
         "Aceste setări pot fi reconfigurate oricând în setările aplicației.",
     },
     survey: {
-      title: "Bun venit la AnythingLLM",
+      title: "Bun venit la Mind.Law",
       description:
-        "Ajută-ne să facem AnythingLLM potrivit pentru nevoile tale. Opțional.",
+        "Ajută-ne să facem Mind.Law potrivit pentru nevoile tale. Opțional.",
       email: "Care este adresa ta de email?",
-      useCase: "Pentru ce vei folosi AnythingLLM?",
+      useCase: "Pentru ce vei folosi Mind.Law?",
       useCaseWork: "Pentru muncă",
       useCasePersonal: "Pentru uz personal",
       useCaseOther: "Altele",
-      comment: "De unde ai aflat despre AnythingLLM?",
+      comment: "De unde ai aflat despre Mind.Law?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube, etc. - Spune-ne cum ne-ai găsit!",
       skip: "Sari peste sondaj",
@@ -54,7 +54,7 @@ const TRANSLATIONS = {
     workspace: {
       title: "Creează primul tău spațiu de lucru",
       description:
-        "Creează primul tău spațiu de lucru și începe să folosești AnythingLLM.",
+        "Creează primul tău spațiu de lucru și începe să folosești Mind.Law.",
     },
   },
   common: {
@@ -133,7 +133,7 @@ const TRANSLATIONS = {
     checklist: {
       title: "Început rapid",
       tasksLeft: "sarcini rămase",
-      completed: "Ești pe drumul să devii expert AnythingLLM!",
+      completed: "Ești pe drumul să devii expert Mind.Law!",
       dismiss: "închide",
       tasks: {
         create_workspace: {
@@ -239,7 +239,7 @@ const TRANSLATIONS = {
       add: "Adaugă mesaj nou",
       save: "Salvează mesajele",
       heading: "Explică-mi",
-      body: "beneficiile AnythingLLM",
+      body: "beneficiile Mind.Law",
     },
     pfp: {
       title: "Imagine profil asistent",
@@ -334,7 +334,7 @@ const TRANSLATIONS = {
   vector: {
     title: "Baza de date vectorială",
     description:
-      "Acestea sunt credențialele și setările pentru modul în care funcționează instanța ta AnythingLLM. Este important să fie corecte și actuale.",
+      "Acestea sunt credențialele și setările pentru modul în care funcționează instanța ta Mind.Law. Este important să fie corecte și actuale.",
     provider: {
       title: "Furnizor baza de date vectorială",
       description: "Nu este necesară configurarea pentru LanceDB.",
@@ -379,7 +379,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Confidențialitate & Gestionarea datelor",
     description:
-      "Aceasta este configurația ta pentru modul în care furnizorii terți conectați și AnythingLLM gestionează datele tale.",
+      "Aceasta este configurația ta pentru modul în care furnizorii terți conectați și Mind.Law gestionează datele tale.",
     llm: "Selecția LLM",
     embedding: "Preferința embedding",
     vector: "Baza de date vectorială",
@@ -564,22 +564,22 @@ const TRANSLATIONS = {
       fetching: "Se preia...",
       "fetch-website": "Preluare site web",
       "privacy-notice":
-        "Aceste fișiere vor fi încărcate în procesorul de documente care rulează pe această instanță AnythingLLM. Aceste fișiere nu sunt trimise sau partajate cu o terță parte.",
+        "Aceste fișiere vor fi încărcate în procesorul de documente care rulează pe această instanță Mind.Law. Aceste fișiere nu sunt trimise sau partajate cu o terță parte.",
     },
     pinning: {
       what_pinning: "Ce este fixarea documentelor?",
       pin_explained_block1:
-        "Când **fixezi** un document în AnythingLLM, vom injecta întregul conținut al documentului în fereastra de prompt pentru ca LLM-ul tău să-l înțeleagă pe deplin.",
+        "Când **fixezi** un document în Mind.Law, vom injecta întregul conținut al documentului în fereastra de prompt pentru ca LLM-ul tău să-l înțeleagă pe deplin.",
       pin_explained_block2:
         "Acest lucru funcționează cel mai bine cu **modele cu context mare** sau fișiere mici care sunt critice pentru baza sa de cunoștințe.",
       pin_explained_block3:
-        "Dacă nu obții răspunsurile dorite de la AnythingLLM în mod implicit, atunci fixarea este o modalitate excelentă de a obține răspunsuri de calitate superioară dintr-un clic.",
+        "Dacă nu obții răspunsurile dorite de la Mind.Law în mod implicit, atunci fixarea este o modalitate excelentă de a obține răspunsuri de calitate superioară dintr-un clic.",
       accept: "Ok, am înțeles",
     },
     watching: {
       what_watching: "Ce face vizualizarea unui document?",
       watch_explained_block1:
-        "Când **urmărești** un document în AnythingLLM, vom sincroniza *automat* conținutul documentului tău din sursa originală la intervale regulate. Acest lucru va actualiza automat conținutul în fiecare spațiu de lucru unde acest fișier este gestionat.",
+        "Când **urmărești** un document în Mind.Law, vom sincroniza *automat* conținutul documentului tău din sursa originală la intervale regulate. Acest lucru va actualiza automat conținutul în fiecare spațiu de lucru unde acest fișier este gestionat.",
       watch_explained_block2:
         "Această funcție suportă în prezent conținutul online și nu va fi disponibilă pentru documentele încărcate manual.",
       watch_explained_block3_start:
@@ -774,7 +774,7 @@ const TRANSLATIONS = {
         unauthenticated: {
           title: "Autentificare necesară",
           description:
-            "Trebuie să te autentifici cu AnythingLLM Community Hub înainte de a publica elemente.",
+            "Trebuie să te autentifici cu Mind.Law Community Hub înainte de a publica elemente.",
           button: "Conectează-te la Community Hub",
         },
       },
@@ -881,16 +881,16 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "Preferințe UI",
-      description: "Setează preferințele UI pentru AnythingLLM.",
+      description: "Setează preferințele UI pentru Mind.Law.",
     },
     branding: {
       title: "Branding & White-labeling",
       description:
-        "Personalizează-ți instanța AnythingLLM cu branding personalizat.",
+        "Personalizează-ți instanța Mind.Law cu branding personalizat.",
     },
     chat: {
       title: "Chat",
-      description: "Setează preferințele de chat pentru AnythingLLM.",
+      description: "Setează preferințele de chat pentru Mind.Law.",
       auto_submit: {
         title: "Trimite automat intrarea vocală",
         description:
@@ -934,7 +934,7 @@ const TRANSLATIONS = {
       "display-language": {
         title: "Limba de afișare",
         description:
-          "Selectează limba preferată pentru a reda interfața AnythingLLM - atunci când traducerile sunt disponibile.",
+          "Selectează limba preferată pentru a reda interfața Mind.Law - atunci când traducerile sunt disponibile.",
       },
       logo: {
         title: "Logo brand",
@@ -953,7 +953,7 @@ const TRANSLATIONS = {
         system: "sistem",
         user: "utilizator",
         message: "mesaj",
-        assistant: "Asistent Chat AnythingLLM",
+        assistant: "Asistent Chat Mind.Law",
         "double-click": "Dublu clic pentru a edita...",
         save: "Salvează mesajele",
       },
@@ -988,7 +988,7 @@ const TRANSLATIONS = {
   api: {
     title: "Chei API",
     description:
-      "Cheile API permit deținătorului să acceseze și să gestioneze programatic această instanță AnythingLLM.",
+      "Cheile API permit deținătorului să acceseze și să gestioneze programatic această instanță Mind.Law.",
     link: "Citește documentația API",
     generate: "Generează o nouă cheie API",
     table: {
@@ -1000,7 +1000,7 @@ const TRANSLATIONS = {
   llm: {
     title: "Preferința LLM",
     description:
-      "Acestea sunt credențialele și setările pentru furnizorul tău preferat de chat și embedding LLM. Este important ca aceste chei să fie actuale și corecte, altfel AnythingLLM nu va funcționa corect.",
+      "Acestea sunt credențialele și setările pentru furnizorul tău preferat de chat și embedding LLM. Este important ca aceste chei să fie actuale și corecte, altfel Mind.Law nu va funcționa corect.",
     provider: "Furnizor LLM",
     providers: {
       azure_openai: {
@@ -1020,7 +1020,7 @@ const TRANSLATIONS = {
       "Acestea sunt credențialele și setările pentru furnizorul tău preferat de model de transcriere. Este important ca aceste chei să fie actuale și corecte, altfel fișierele media și audio nu vor fi transcrise.",
     provider: "Furnizor transcriere",
     "warn-start":
-      "Utilizarea modelului local Whisper pe mașini cu RAM sau CPU limitat poate bloca AnythingLLM la procesarea fișierelor media.",
+      "Utilizarea modelului local Whisper pe mașini cu RAM sau CPU limitat poate bloca Mind.Law la procesarea fișierelor media.",
     "warn-recommend":
       "Recomandăm cel puțin 2GB de RAM și încărcarea fișierelor <10Mb.",
     "warn-end": "Modelul încorporat se va descărca automat la prima utilizare.",
@@ -1030,7 +1030,7 @@ const TRANSLATIONS = {
     "desc-start":
       "Atunci când utilizați un LLM care nu suportă nativ un motor de embedding - s-ar putea să fie necesar să specificați credențiale suplimentare pentru embedding text.",
     "desc-end":
-      "Embedding-ul este procesul de transformare a textului în vectori. Aceste credențiale sunt necesare pentru a transforma fișierele și prompturile dvs. într-un format pe care AnythingLLM îl poate utiliza pentru procesare.",
+      "Embedding-ul este procesul de transformare a textului în vectori. Aceste credențiale sunt necesare pentru a transforma fișierele și prompturile dvs. într-un format pe care Mind.Law îl poate utiliza pentru procesare.",
     provider: {
       title: "Furnizor embedding",
     },
@@ -1071,7 +1071,7 @@ const TRANSLATIONS = {
     password: {
       title: "Protecție prin parolă",
       description:
-        "Protejează instanța AnythingLLM cu o parolă. Dacă o uiți, nu există metode de recuperare, deci asigură-te că o salvezi.",
+        "Protejează instanța Mind.Law cu o parolă. Dacă o uiți, nu există metode de recuperare, deci asigură-te că o salvezi.",
       "password-label": "Parola instanței",
     },
   },

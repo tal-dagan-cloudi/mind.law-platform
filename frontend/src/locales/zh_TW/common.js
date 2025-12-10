@@ -8,7 +8,7 @@ const TRANSLATIONS = {
     llm: {
       title: "LLM 偏好",
       description:
-        "AnythingLLM 可以與多家 LLM 提供商合作。這將是處理聊天的服務。",
+        "Mind.Law 可以與多家 LLM 提供商合作。這將是處理聊天的服務。",
     },
     userSetup: {
       title: "使用者設定",
@@ -34,14 +34,14 @@ const TRANSLATIONS = {
       settingsHint: "這些設定可以隨時在設定中重新配置。",
     },
     survey: {
-      title: "歡迎使用 AnythingLLM",
-      description: "幫助我們為您的需求打造 AnythingLLM。可選。",
+      title: "歡迎使用 Mind.Law",
+      description: "幫助我們為您的需求打造 Mind.Law。可選。",
       email: "您的電子郵件是什麼？",
-      useCase: "您將如何使用 AnythingLLM？",
+      useCase: "您將如何使用 Mind.Law？",
       useCaseWork: "用於工作",
       useCasePersonal: "用於個人使用",
       useCaseOther: "其他",
-      comment: "您是如何聽說 AnythingLLM 的？",
+      comment: "您是如何聽說 Mind.Law 的？",
       commentPlaceholder:
         "Reddit，Twitter，GitHub，YouTube 等 - 讓我們知道您是如何找到我們的！",
       skip: "跳過調查",
@@ -49,7 +49,7 @@ const TRANSLATIONS = {
     },
     workspace: {
       title: "創建您的第一個工作區",
-      description: "創建您的第一個工作區並開始使用 AnythingLLM。",
+      description: "創建您的第一個工作區並開始使用 Mind.Law。",
     },
   },
   common: {
@@ -146,7 +146,7 @@ const TRANSLATIONS = {
       add: "新增訊息",
       save: "儲存訊息",
       heading: "請向我說明",
-      body: "AnythingLLM 的優點",
+      body: "Mind.Law 的優點",
     },
     pfp: {
       title: "助理個人檔案圖片",
@@ -325,7 +325,7 @@ const TRANSLATIONS = {
   api: {
     title: "API 金鑰",
     description:
-      "API 金鑰允許持有者以程式化方式存取和管理此 AnythingLLM 系統。",
+      "API 金鑰允許持有者以程式化方式存取和管理此 Mind.Law 系統。",
     link: "閱讀 API 文件",
     generate: "產生新的 API 金鑰",
     table: {
@@ -337,7 +337,7 @@ const TRANSLATIONS = {
   llm: {
     title: "LLM 偏好設定",
     description:
-      "這些是您偏好的 LLM 對話與嵌入提供者的憑證和設定。確保這些金鑰是最新且正確的，否則 AnythingLLM 將無法正常運作。",
+      "這些是您偏好的 LLM 對話與嵌入提供者的憑證和設定。確保這些金鑰是最新且正確的，否則 Mind.Law 將無法正常運作。",
     provider: "LLM 提供者",
     providers: {
       azure_openai: {
@@ -357,7 +357,7 @@ const TRANSLATIONS = {
       "這些是您偏好的語音轉錄模型提供者的憑證和設定。確保這些金鑰是最新且正確的，否則媒體檔案和音訊將無法轉錄。",
     provider: "語音轉錄提供者",
     "warn-start":
-      "在記憶體或處理器資源有限的電腦上使用本機 Whisper 模型，處理媒體檔案時可能會造成 AnythingLLM 停頓。",
+      "在記憶體或處理器資源有限的電腦上使用本機 Whisper 模型，處理媒體檔案時可能會造成 Mind.Law 停頓。",
     "warn-recommend": "我們建議至少 2GB 的記憶體，並且上傳小於 10MB 的檔案。",
     "warn-end": "內建模型將會在第一次使用時自動下載。",
   },
@@ -366,7 +366,7 @@ const TRANSLATIONS = {
     "desc-start":
       "當使用原生不支援嵌入引擎的 LLM 時，您可能需要額外指定用於嵌入文字的憑證。",
     "desc-end":
-      "嵌入是將文字轉換成向量的過程。這些憑證是用於將您的檔案和提示詞轉換成 AnythingLLM 可以處理的格式。",
+      "嵌入是將文字轉換成向量的過程。這些憑證是用於將您的檔案和提示詞轉換成 Mind.Law 可以處理的格式。",
     provider: {
       title: "向量嵌入提供者",
     },
@@ -390,7 +390,7 @@ const TRANSLATIONS = {
   vector: {
     title: "向量資料庫",
     description:
-      "這些是您的 AnythingLLM 系統運作方式的憑證和設定。確保這些金鑰是最新且正確的，這點非常重要。",
+      "這些是您的 Mind.Law 系統運作方式的憑證和設定。確保這些金鑰是最新且正確的，這點非常重要。",
     provider: {
       title: "向量資料庫提供者",
       description: "使用 LanceDB 不需要任何設定。",
@@ -433,7 +433,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "隱私與資料處理",
     description:
-      "這是您針對已連線的第三方供應商和 AnythingLLM 如何處理您的資料的設定。",
+      "這是您針對已連線的第三方供應商和 Mind.Law 如何處理您的資料的設定。",
     llm: "LLM 選擇",
     embedding: "向量嵌入偏好設定",
     vector: "向量資料庫",
@@ -587,22 +587,22 @@ const TRANSLATIONS = {
       fetching: "正在擷取...",
       "fetch-website": "擷取網站",
       "privacy-notice":
-        "這些檔案將上傳到此 AnythingLLM 實例中的文件處理器。這些檔案不會發送或共享給第三方。",
+        "這些檔案將上傳到此 Mind.Law 實例中的文件處理器。這些檔案不會發送或共享給第三方。",
     },
     pinning: {
       what_pinning: "什麼是文件固定？",
       pin_explained_block1:
-        "當您在 AnythingLLM 中<b>固定</b>一個文件時，我們會將該文件的所有內容注入到您的提示窗口中，讓您的 LLM 完全理解。",
+        "當您在 Mind.Law 中<b>固定</b>一個文件時，我們會將該文件的所有內容注入到您的提示窗口中，讓您的 LLM 完全理解。",
       pin_explained_block2:
         "這對於<b>大範圍模型</b>或對知識庫至關重要的小型文件效果最佳。",
       pin_explained_block3:
-        "如果您沒有從 AnythingLLM 預設獲得理想的答案，那麼固定是一個輕鬆獲得更高質量答案的方法。",
+        "如果您沒有從 Mind.Law 預設獲得理想的答案，那麼固定是一個輕鬆獲得更高質量答案的方法。",
       accept: "好的，明白了",
     },
     watching: {
       what_watching: "觀看文件有何作用？",
       watch_explained_block1:
-        "當您在 AnythingLLM 中<b>觀看</b>一個文件時，我們會<i>自動</i>定期同步該文件的內容，並在每個管理該文件的工作區中自動更新內容。",
+        "當您在 Mind.Law 中<b>觀看</b>一個文件時，我們會<i>自動</i>定期同步該文件的內容，並在每個管理該文件的工作區中自動更新內容。",
       watch_explained_block2:
         "此功能目前僅支持基於線上內容，無法用於手動上傳的文件。",
       watch_explained_block3_start: "您可以從 ",
@@ -704,15 +704,15 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "介面偏好設定",
-      description: "設定你在 AnythingLLM 的使用介面偏好。",
+      description: "設定你在 Mind.Law 的使用介面偏好。",
     },
     branding: {
       title: "品牌與白標設定",
-      description: "使用自訂品牌設計將 AnythingLLM 白標化。",
+      description: "使用自訂品牌設計將 Mind.Law 白標化。",
     },
     chat: {
       title: "聊天",
-      description: "設定你在 AnythingLLM 的聊天偏好。",
+      description: "設定你在 Mind.Law 的聊天偏好。",
       auto_submit: {
         title: "語音輸入自動送出",
         description: "在靜音一段時間後自動送出語音輸入內容",
@@ -749,7 +749,7 @@ const TRANSLATIONS = {
       },
       "display-language": {
         title: "顯示語言",
-        description: "選擇 AnythingLLM 使用者介面的顯示語言（如有提供翻譯）。",
+        description: "選擇 Mind.Law 使用者介面的顯示語言（如有提供翻譯）。",
       },
       logo: {
         title: "品牌標誌",
@@ -766,7 +766,7 @@ const TRANSLATIONS = {
         system: "系統",
         user: "使用者",
         message: "訊息",
-        assistant: "AnythingLLM 聊天助理",
+        assistant: "Mind.Law 聊天助理",
         "double-click": "雙擊進行編輯...",
         save: "儲存訊息",
       },
@@ -799,7 +799,7 @@ const TRANSLATIONS = {
     checklist: {
       title: "開始使用",
       tasksLeft: "個任務未完成",
-      completed: "你已經走在成為AnythingLLM專家的路上！",
+      completed: "你已經走在成為Mind.Law專家的路上！",
       dismiss: "關閉",
       tasks: {
         create_workspace: {
@@ -946,7 +946,7 @@ const TRANSLATIONS = {
         unauthenticated: {
           title: "需要驗證",
           description:
-            "在發布項目之前，您需要通過 AnythingLLM 社群中心進行驗證。",
+            "在發布項目之前，您需要通過 Mind.Law 社群中心進行驗證。",
           button: "連接到社群中心",
         },
       },
@@ -997,7 +997,7 @@ const TRANSLATIONS = {
     password: {
       title: "密碼保護",
       description:
-        "使用密碼保護您的 AnythingLLM 系統。如果您忘記這個密碼，將沒有復原方法，因此請務必儲存此密碼。",
+        "使用密碼保護您的 Mind.Law 系統。如果您忘記這個密碼，將沒有復原方法，因此請務必儲存此密碼。",
       "password-label": "實例密碼",
     },
   },
