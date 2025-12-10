@@ -3,7 +3,7 @@ const Provider = require("./ai-provider.js");
 const InheritMultiple = require("./helpers/classes.js");
 const UnTooled = require("./helpers/untooled.js");
 const { toValidNumber } = require("../../../http/index.js");
-const { getAnythingLLMUserAgent } = require("../../../../endpoints/utils");
+const { getMind.LawUserAgent } = require("../../../../endpoints/utils");
 
 /**
  * The agent provider for the Generic OpenAI provider.
@@ -22,7 +22,7 @@ class GenericOpenAiProvider extends InheritMultiple([Provider, UnTooled]) {
       apiKey: process.env.GENERIC_OPEN_AI_API_KEY ?? null,
       maxRetries: 3,
       defaultHeaders: {
-        "User-Agent": getAnythingLLMUserAgent(),
+        "User-Agent": getMind.LawUserAgent(),
       },
     });
 

@@ -18,17 +18,17 @@ const {
 
 /**
  * @class MCPHypervisor
- * @description A class that manages MCP servers found in the storage/plugins/anythingllm_mcp_servers.json file.
+ * @description A class that manages MCP servers found in the storage/plugins/mindlaw_mcp_servers.json file.
  * This class is responsible for booting, stopping, and reloading MCP servers - it is the user responsibility for the MCP server definitions
  * to me correct and also functioning tools depending on their deployment (docker vs local) as well as the security of said tools
  * since MCP is basically arbitrary code execution.
  *
  * @notice This class is a singleton.
  * @notice Each MCP tool has dependencies specific to it and this call WILL NOT check for them.
- * For example, if the tools requires `npx` then the context in which AnythingLLM mains process is running will need to access npx.
+ * For example, if the tools requires `npx` then the context in which Mind.Law mains process is running will need to access npx.
  * This is typically not common in our pre-built image so may not function. But this is the case anywhere MCP is used.
  *
- * AnythingLLM will take care of porting MCP servers to agent-callable functions via @agent directive.
+ * Mind.Law will take care of porting MCP servers to agent-callable functions via @agent directive.
  * @see MCPCompatibilityLayer.convertServerToolsToPlugins
  */
 class MCPHypervisor {
@@ -68,12 +68,12 @@ class MCPHypervisor {
       process.env.NODE_ENV === "development"
         ? path.resolve(
             __dirname,
-            `../../../storage/plugins/anythingllm_mcp_servers.json`
+            `../../../storage/plugins/mindlaw_mcp_servers.json`
           )
         : path.resolve(
             process.env.STORAGE_DIR ??
               path.resolve(__dirname, `../../../storage`),
-            `plugins/anythingllm_mcp_servers.json`
+            `plugins/mindlaw_mcp_servers.json`
           );
 
     if (!fs.existsSync(this.mcpServerJSONPath)) {
@@ -233,7 +233,7 @@ class MCPHypervisor {
   /**
    * Load shell environment for desktop applications.
    * MacOS and Linux don't inherit login shell environment. So this function
-   * fixes the PATH and accessible commands when running AnythingLLM outside of Docker during development on Mac/Linux and in-container (Linux).
+   * fixes the PATH and accessible commands when running Mind.Law outside of Docker during development on Mac/Linux and in-container (Linux).
    * @returns {Promise<{[key: string]: string}>} - Environment variables from shell
    */
   async #loadShellEnvironment() {
@@ -466,15 +466,15 @@ class MCPHypervisor {
     const serverDefinitions = this.mcpServerConfigs;
     for (const { name, server } of serverDefinitions) {
       if (
-        server.anythingllm?.hasOwnProperty("autoStart") &&
-        server.anythingllm.autoStart === false
+        server.mindlaw?.hasOwnProperty("autoStart") &&
+        server.mindlaw.autoStart === false
       ) {
         this.log(
-          `MCP server ${name} has anythingllm.autoStart property set to false, skipping boot!`
+          `MCP server ${name} has mindlaw.autoStart property set to false, skipping boot!`
         );
         this.mcpLoadingResults[name] = {
           status: "failed",
-          message: `MCP server ${name} has anythingllm.autoStart property set to false, boot skipped!`,
+          message: `MCP server ${name} has mindlaw.autoStart property set to false, boot skipped!`,
         };
         continue;
       }

@@ -32,7 +32,7 @@ const { hotdirPath, normalizePath, isWithin } = require("../files");
 /**
  * Users can pass in documents as attachments to the chat API.
  * The name of the document is the name of the attachment and must include the file extension.
- * the mime type for documents is `application/anythingllm-document` - anything else is assumed to be an image.
+ * the mime type for documents is `application/mindlaw-document` - anything else is assumed to be an image.
  * @param {{name: string, mime: string, contentString: string}[]} attachments
  * @returns {Promise<{parsedDocuments: Object[], imageAttachments: {name: string; mime: string; contentString: string}[]}>}
  */
@@ -46,7 +46,7 @@ async function processDocumentAttachments(attachments = []) {
       attachment &&
       attachment.contentString &&
       attachment.mime &&
-      attachment.mime.toLowerCase() === "application/anythingllm-document"
+      attachment.mime.toLowerCase() === "application/mindlaw-document"
     )
       documentAttachments.push(attachment);
     else imageAttachments.push(attachment);

@@ -8,7 +8,7 @@ const {
   clientAbortedHandler,
 } = require("../../helpers/chat/responses");
 const { toValidNumber } = require("../../http");
-const { getAnythingLLMUserAgent } = require("../../../endpoints/utils");
+const { getMind.LawUserAgent } = require("../../../endpoints/utils");
 
 class GenericOpenAiLLM {
   constructor(embedder = null, modelPreference = null) {
@@ -24,7 +24,7 @@ class GenericOpenAiLLM {
       baseURL: this.basePath,
       apiKey: process.env.GENERIC_OPEN_AI_API_KEY ?? null,
       defaultHeaders: {
-        "User-Agent": getAnythingLLMUserAgent(),
+        "User-Agent": getMind.LawUserAgent(),
       },
     });
     this.model =

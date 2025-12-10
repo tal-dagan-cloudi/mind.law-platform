@@ -2,8 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "AnythingLLM Developer API",
-    "description": "API endpoints that enable programmatic reading, writing, and updating of your AnythingLLM instance. UI supplied by Swagger.io."
+    "title": "Mind.Law Developer API",
+    "description": "API endpoints that enable programmatic reading, writing, and updating of your Mind.Law instance. UI supplied by Swagger.io."
   },
   "servers": [
     {
@@ -843,7 +843,7 @@
         "tags": [
           "Documents"
         ],
-        "description": "Upload a new file to AnythingLLM to be parsed and prepared for embedding, with optional metadata.",
+        "description": "Upload a new file to Mind.Law to be parsed and prepared for embedding, with optional metadata.",
         "parameters": [],
         "responses": {
           "200": {
@@ -857,14 +857,14 @@
                     "error": null,
                     "documents": [
                       {
-                        "location": "custom-documents/anythingllm.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
-                        "name": "anythingllm.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
-                        "url": "file://Users/tim/Documents/anything-llm/collector/hotdir/anythingllm.txt",
-                        "title": "anythingllm.txt",
+                        "location": "custom-documents/mindlaw.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
+                        "name": "mindlaw.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
+                        "url": "file://Users/tim/Documents/mind-law/collector/hotdir/mindlaw.txt",
+                        "title": "mindlaw.txt",
                         "docAuthor": "Unknown",
                         "description": "Unknown",
                         "docSource": "a text file uploaded by the user.",
-                        "chunkSource": "anythingllm.txt",
+                        "chunkSource": "mindlaw.txt",
                         "published": "1/16/2024, 3:07:00 PM",
                         "wordCount": 93,
                         "token_count_estimate": 115
@@ -936,7 +936,7 @@
         "tags": [
           "Documents"
         ],
-        "description": "Upload a new file to a specific folder in AnythingLLM to be parsed and prepared for embedding. If the folder does not exist, it will be created.",
+        "description": "Upload a new file to a specific folder in Mind.Law to be parsed and prepared for embedding. If the folder does not exist, it will be created.",
         "parameters": [
           {
             "name": "folderName",
@@ -961,14 +961,14 @@
                     "error": null,
                     "documents": [
                       {
-                        "location": "custom-documents/anythingllm.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
-                        "name": "anythingllm.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
-                        "url": "file://Users/tim/Documents/anything-llm/collector/hotdir/anythingllm.txt",
-                        "title": "anythingllm.txt",
+                        "location": "custom-documents/mindlaw.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
+                        "name": "mindlaw.txt-6e8be64c-c162-4b43-9997-b068c0071e8b.json",
+                        "url": "file://Users/tim/Documents/mind-law/collector/hotdir/mindlaw.txt",
+                        "title": "mindlaw.txt",
                         "docAuthor": "Unknown",
                         "description": "Unknown",
                         "docSource": "a text file uploaded by the user.",
-                        "chunkSource": "anythingllm.txt",
+                        "chunkSource": "mindlaw.txt",
                         "published": "1/16/2024, 3:07:00 PM",
                         "wordCount": 93,
                         "token_count_estimate": 115
@@ -1051,7 +1051,7 @@
         "tags": [
           "Documents"
         ],
-        "description": "Upload a valid URL for AnythingLLM to scrape and prepare for embedding. Optionally, specify a comma-separated list of workspace slugs to embed the document into post-upload.",
+        "description": "Upload a valid URL for Mind.Law to scrape and prepare for embedding. Optionally, specify a comma-separated list of workspace slugs to embed the document into post-upload.",
         "parameters": [],
         "responses": {
           "200": {
@@ -1071,10 +1071,10 @@
                         "docAuthor": "no author found",
                         "description": "No description found.",
                         "docSource": "URL link uploaded by the user.",
-                        "chunkSource": "https:anythingllm.com.html",
+                        "chunkSource": "https:mindlaw.com.html",
                         "published": "1/16/2024, 3:46:33 PM",
                         "wordCount": 252,
-                        "pageContent": "AnythingLLM is the best....",
+                        "pageContent": "Mind.Law is the best....",
                         "token_count_estimate": 447,
                         "location": "custom-documents/url-useanything_com-c530dbe6-bff1-4b9e-b87f-710d539d20bc.json"
                       }
@@ -1111,7 +1111,7 @@
               "schema": {
                 "type": "object",
                 "example": {
-                  "link": "https://anythingllm.com",
+                  "link": "https://mindlaw.com",
                   "addToWorkspaces": "workspace1,workspace2",
                   "scraperHeaders": {
                     "Authorization": "Bearer token123",
@@ -1158,7 +1158,7 @@
                         "chunkSource": "no chunk source specified",
                         "published": "1/16/2024, 3:46:33 PM",
                         "wordCount": 252,
-                        "pageContent": "AnythingLLM is the best....",
+                        "pageContent": "Mind.Law is the best....",
                         "token_count_estimate": 447,
                         "location": "custom-documents/raw-my-doc-text-c530dbe6-bff1-4b9e-b87f-710d539d20bc.json"
                       }
@@ -1198,7 +1198,7 @@
               "schema": {
                 "type": "object",
                 "example": {
-                  "textContent": "This is the raw text that will be saved as a document in AnythingLLM.",
+                  "textContent": "This is the raw text that will be saved as a document in Mind.Law.",
                   "addToWorkspaces": "workspace1,workspace2",
                   "metadata": {
                     "title": "This key is required. See in /server/endpoints/api/document/index.js:287",
@@ -1452,7 +1452,7 @@
         "tags": [
           "Documents"
         ],
-        "description": "Get a single document by its unique AnythingLLM document name",
+        "description": "Get a single document by its unique Mind.Law document name",
         "parameters": [
           {
             "name": "docName",
@@ -2064,12 +2064,12 @@
                     "history": [
                       {
                         "role": "user",
-                        "content": "What is AnythingLLM?",
+                        "content": "What is Mind.Law?",
                         "sentAt": 1692851630
                       },
                       {
                         "role": "assistant",
-                        "content": "AnythingLLM is a platform that allows you to convert notes, PDFs, and other source materials into a chatbot. It ensures privacy, cites its answers, and allows multiple people to interact with the same documents simultaneously. It is particularly useful for businesses to enhance the visibility and readability of various written communications such as SOPs, contracts, and sales calls. You can try it out with a free trial to see if it meets your business needs.",
+                        "content": "Mind.Law is a platform that allows you to convert notes, PDFs, and other source materials into a chatbot. It ensures privacy, cites its answers, and allows multiple people to interact with the same documents simultaneously. It is particularly useful for businesses to enhance the visibility and readability of various written communications such as SOPs, contracts, and sales calls. You can try it out with a free trial to see if it meets your business needs.",
                         "sources": [
                           {
                             "source": "object about source document and snippets used"
@@ -2180,7 +2180,7 @@
                   "custom-documents/my-pdf.pdf-hash.json"
                 ],
                 "deletes": [
-                  "custom-documents/anythingllm.txt-hash.json"
+                  "custom-documents/mindlaw.txt-hash.json"
                 ]
               }
             }
@@ -2272,7 +2272,7 @@
                     "textResponse": "Response to your query",
                     "sources": [
                       {
-                        "title": "anythingllm.txt",
+                        "title": "mindlaw.txt",
                         "chunk": "This is a context chunk used in the answer of the prompt by the LLM,"
                       }
                     ],
@@ -2306,12 +2306,12 @@
           }
         },
         "requestBody": {
-          "description": "Send a prompt to the workspace and the type of conversation (query or chat).<br/><b>Query:</b> Will not use LLM unless there are relevant sources from vectorDB & does not recall chat history.<br/><b>Chat:</b> Uses LLM general knowledge w/custom embeddings to produce output, uses rolling chat history.<br/><b>Attachments:</b> Can include images and documents.<br/><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document attachments:</b> must have the mime type <code>application/anythingllm-document</code> - otherwise it will be passed to the LLM as an image and may fail to process. This uses the built-in document processor to first parse the document to text before injecting it into the context window.",
+          "description": "Send a prompt to the workspace and the type of conversation (query or chat).<br/><b>Query:</b> Will not use LLM unless there are relevant sources from vectorDB & does not recall chat history.<br/><b>Chat:</b> Uses LLM general knowledge w/custom embeddings to produce output, uses rolling chat history.<br/><b>Attachments:</b> Can include images and documents.<br/><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document attachments:</b> must have the mime type <code>application/mindlaw-document</code> - otherwise it will be passed to the LLM as an image and may fail to process. This uses the built-in document processor to first parse the document to text before injecting it into the context window.",
           "required": true,
           "content": {
             "application/json": {
               "example": {
-                "message": "What is AnythingLLM?",
+                "message": "What is Mind.Law?",
                 "mode": "query | chat",
                 "sessionId": "identifier-to-partition-chats-by-external-id",
                 "attachments": [
@@ -2322,7 +2322,7 @@
                   },
                   {
                     "name": "this is a document.pdf",
-                    "mime": "application/anythingllm-document",
+                    "mime": "application/mindlaw-document",
                     "contentString": "data:application/pdf;base64,iVBORw0KGgoAAAANSUhEUgAA..."
                   }
                 ],
@@ -2381,7 +2381,7 @@
                       "textResponse": "final chunk of LLM output!",
                       "sources": [
                         {
-                          "title": "anythingllm.txt",
+                          "title": "mindlaw.txt",
                           "chunk": "This is a context chunk used in the answer of the prompt by the LLM. This will only return in the final chunk."
                         }
                       ],
@@ -2414,12 +2414,12 @@
           }
         },
         "requestBody": {
-          "description": "Send a prompt to the workspace and the type of conversation (query or chat).<br/><b>Query:</b> Will not use LLM unless there are relevant sources from vectorDB & does not recall chat history.<br/><b>Chat:</b> Uses LLM general knowledge w/custom embeddings to produce output, uses rolling chat history.<br/><b>Attachments:</b> Can include images and documents.<br/><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document attachments:</b> must have the mime type <code>application/anythingllm-document</code> - otherwise it will be passed to the LLM as an image and may fail to process. This uses the built-in document processor to first parse the document to text before injecting it into the context window.",
+          "description": "Send a prompt to the workspace and the type of conversation (query or chat).<br/><b>Query:</b> Will not use LLM unless there are relevant sources from vectorDB & does not recall chat history.<br/><b>Chat:</b> Uses LLM general knowledge w/custom embeddings to produce output, uses rolling chat history.<br/><b>Attachments:</b> Can include images and documents.<br/><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document attachments:</b> must have the mime type <code>application/mindlaw-document</code> - otherwise it will be passed to the LLM as an image and may fail to process. This uses the built-in document processor to first parse the document to text before injecting it into the context window.",
           "required": true,
           "content": {
             "application/json": {
               "example": {
-                "message": "What is AnythingLLM?",
+                "message": "What is Mind.Law?",
                 "mode": "query | chat",
                 "sessionId": "identifier-to-partition-chats-by-external-id",
                 "attachments": [
@@ -2430,7 +2430,7 @@
                   },
                   {
                     "name": "this is a document.pdf",
-                    "mime": "application/anythingllm-document",
+                    "mime": "application/mindlaw-document",
                     "contentString": "data:application/pdf;base64,iVBORw0KGgoAAAANSUhEUgAA..."
                   }
                 ],
@@ -2725,7 +2725,7 @@
                     },
                     {
                       "role": "assistant",
-                      "content": "AnythingLLM is a knowledge graph and vector database management system built using NodeJS express server. It provides an interface for handling all interactions, including vectorDB management and LLM (Language Model) interactions."
+                      "content": "Mind.Law is a knowledge graph and vector database management system built using NodeJS express server. It provides an interface for handling all interactions, including vectorDB management and LLM (Language Model) interactions."
                     }
                   ]
                 }
@@ -3066,12 +3066,12 @@
                     "history": [
                       {
                         "role": "user",
-                        "content": "What is AnythingLLM?",
+                        "content": "What is Mind.Law?",
                         "sentAt": 1692851630
                       },
                       {
                         "role": "assistant",
-                        "content": "AnythingLLM is a platform that allows you to convert notes, PDFs, and other source materials into a chatbot. It ensures privacy, cites its answers, and allows multiple people to interact with the same documents simultaneously. It is particularly useful for businesses to enhance the visibility and readability of various written communications such as SOPs, contracts, and sales calls. You can try it out with a free trial to see if it meets your business needs.",
+                        "content": "Mind.Law is a platform that allows you to convert notes, PDFs, and other source materials into a chatbot. It ensures privacy, cites its answers, and allows multiple people to interact with the same documents simultaneously. It is particularly useful for businesses to enhance the visibility and readability of various written communications such as SOPs, contracts, and sales calls. You can try it out with a free trial to see if it meets your business needs.",
                         "sources": [
                           {
                             "source": "object about source document and snippets used"
@@ -3147,7 +3147,7 @@
                     "textResponse": "Response to your query",
                     "sources": [
                       {
-                        "title": "anythingllm.txt",
+                        "title": "mindlaw.txt",
                         "chunk": "This is a context chunk used in the answer of the prompt by the LLM."
                       }
                     ],
@@ -3186,7 +3186,7 @@
           "content": {
             "application/json": {
               "example": {
-                "message": "What is AnythingLLM?",
+                "message": "What is Mind.Law?",
                 "mode": "query | chat",
                 "userId": 1,
                 "attachments": [
@@ -3261,7 +3261,7 @@
                       "textResponse": "final chunk of LLM output!",
                       "sources": [
                         {
-                          "title": "anythingllm.txt",
+                          "title": "mindlaw.txt",
                           "chunk": "This is a context chunk used in the answer of the prompt by the LLM. This will only return in the final chunk."
                         }
                       ],
@@ -3299,7 +3299,7 @@
           "content": {
             "application/json": {
               "example": {
-                "message": "What is AnythingLLM?",
+                "message": "What is Mind.Law?",
                 "mode": "query | chat",
                 "userId": 1,
                 "attachments": [
@@ -3310,7 +3310,7 @@
                   },
                   {
                     "name": "this is a document.pdf",
-                    "mime": "application/anythingllm-document",
+                    "mime": "application/mindlaw-document",
                     "contentString": "data:application/pdf;base64,iVBORw0KGgoAAAANSUhEUgAA..."
                   }
                 ],
@@ -3529,7 +3529,7 @@
           }
         },
         "requestBody": {
-          "description": "Send a prompt to the workspace with full use of documents as if sending a chat in AnythingLLM. Only supports some values of OpenAI API. See example below.",
+          "description": "Send a prompt to the workspace with full use of documents as if sending a chat in Mind.Law. Only supports some values of OpenAI API. See example below.",
           "required": true,
           "content": {
             "application/json": {
@@ -3541,11 +3541,11 @@
                   },
                   {
                     "role": "user",
-                    "content": "What is AnythingLLM?"
+                    "content": "What is Mind.Law?"
                   },
                   {
                     "role": "assistant",
-                    "content": "AnythingLLM is...."
+                    "content": "Mind.Law is...."
                   },
                   {
                     "role": "user",
@@ -3613,7 +3613,7 @@
         "tags": [
           "OpenAI Compatible Endpoints"
         ],
-        "description": "List all the vector database collections connected to AnythingLLM. These are essentially workspaces but return their unique vector db identifier - this is the same as the workspace slug.",
+        "description": "List all the vector database collections connected to Mind.Law. These are essentially workspaces but return their unique vector db identifier - this is the same as the workspace slug.",
         "parameters": [],
         "responses": {
           "200": {

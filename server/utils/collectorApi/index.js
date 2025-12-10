@@ -47,7 +47,7 @@ class CollectorApi {
       },
       runtimeSettings: {
         allowAnyIp: process.env.COLLECTOR_ALLOW_ANY_IP ?? "false",
-        browserLaunchArgs: process.env.ANYTHINGLLM_CHROMIUM_ARGS ?? [],
+        browserLaunchArgs: process.env.MINDLAW_CHROMIUM_ARGS ?? [],
       },
     };
   }

@@ -18,10 +18,10 @@ const PGVector = {
   connectionTimeout: 30_000,
   /**
    * Get the table name for the PGVector database.
-   * - Defaults to "anythingllm_vectors" if no table name is provided.
+   * - Defaults to "mindlaw_vectors" if no table name is provided.
    * @returns {string}
    */
-  tableName: () => process.env.PGVECTOR_TABLE_NAME || "anythingllm_vectors",
+  tableName: () => process.env.PGVECTOR_TABLE_NAME || "mindlaw_vectors",
 
   /**
    * Get the connection string for the PGVector database.
@@ -161,7 +161,7 @@ const PGVector = {
 
     if (result.rows.length === 0)
       throw new Error(
-        `The table '${tableName}' was found but does not contain any columns or cannot be accessed by role. It cannot be used as an embedding table in AnythingLLM.`
+        `The table '${tableName}' was found but does not contain any columns or cannot be accessed by role. It cannot be used as an embedding table in Mind.Law.`
       );
 
     for (const rowDef of expectedSchema) {
@@ -186,7 +186,7 @@ const PGVector = {
 
   /**
    * Validate the connection to the database and verify that the table does not already exist.
-   * so that anythingllm can manage the table directly.
+   * so that mindlaw can manage the table directly.
    *
    * @param {{connectionString: string | null, tableName: string | null}} params
    * @returns {Promise<{error: string | null, success: boolean}>}
@@ -289,7 +289,7 @@ const PGVector = {
   },
 
   /**
-   * Check if the anythingllm embedding table exists in the database
+   * Check if the mindlaw embedding table exists in the database
    * @returns {Promise<boolean>}
    */
   dbTableExists: async function () {
@@ -803,7 +803,7 @@ const PGVector = {
   },
 
   /**
-   * Reset the entire vector database table associated with anythingllm
+   * Reset the entire vector database table associated with mindlaw
    * @returns {Promise<{reset: boolean}>}
    */
   reset: async function () {

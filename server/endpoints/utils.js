@@ -60,9 +60,9 @@ async function getDiskStorage() {
  * Returns the model tag based on the provider set in the environment.
  * This information is used to identify the parent model for the system
  * so that we can prioritize the correct model and types for future updates
- * as well as build features in AnythingLLM directly for a specific model or capabilities.
+ * as well as build features in Mind.Law directly for a specific model or capabilities.
  *
- * Disable with  {@link https://github.com/Mintplex-Labs/anything-llm?tab=readme-ov-file#telemetry--privacy|Disable Telemetry}
+ * Disable with  {@link https://github.com/Mintplex-Labs/mind-law?tab=readme-ov-file#telemetry--privacy|Disable Telemetry}
  * @returns {string} The model tag.
  */
 function getModelTag() {
@@ -173,17 +173,17 @@ function getDeploymentVersion() {
 }
 
 /**
- * Returns the user agent for the AnythingLLM deployment.
+ * Returns the user agent for the Mind.Law deployment.
  * @returns {string} The user agent.
  */
-function getAnythingLLMUserAgent() {
+function getMind.LawUserAgent() {
   const version = getDeploymentVersion() || "unknown";
-  return `AnythingLLM/${version}`;
+  return `Mind.Law/${version}`;
 }
 
 module.exports = {
   utilEndpoints,
   getGitVersion,
   getModelTag,
-  getAnythingLLMUserAgent,
+  getMind.LawUserAgent,
 };
