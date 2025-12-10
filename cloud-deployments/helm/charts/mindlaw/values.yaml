@@ -6,7 +6,7 @@ initContainers: []
   #   command: ['sh', '-c', 'chown -R 1000:1000 /storage']
 
 image:
-  repository: mintplexlabs/anythingllm
+  repository: mintplexlabs/mindlaw
   pullPolicy: IfNotPresent
   tag: "1.9.1"
 
@@ -15,36 +15,36 @@ nameOverride: ""
 fullnameOverride: ""
 
 persistentVolume:
-  # AnythingLLM storage data Persistent Volume access modes
+  # Mind.Law storage data Persistent Volume access modes
   # Must match those of existing PV or dynamic provisioner
   # Ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
   #
   accessModes:
     - ReadWriteOnce
 
-  # AnythingLLM storage data Persistent Volume labels
+  # Mind.Law storage data Persistent Volume labels
   #
   labels: {}
 
-  # AnythingLLM storage data Persistent Volume annotations
+  # Mind.Law storage data Persistent Volume annotations
   #
   annotations: {}
 
-  # AnythingLLM storage data Persistent Volume  existing claim name
+  # Mind.Law storage data Persistent Volume  existing claim name
   # If defined, PVC must be created manually before volume will be bound
   #
   existingClaim: ""
 
-  # AnythingLLM storage data Persistent Volume size
+  # Mind.Law storage data Persistent Volume size
   #
   size: 8Gi
 
-  # AnythingLLM storage data Persistent Volume mount path
+  # Mind.Law storage data Persistent Volume mount path
   # Must match the STORAGE_DIR config value
   #
   mountPath: /app/server/storage
 
-  # AnythingLLM storage data Persistent Volume Storage Class
+  # Mind.Law storage data Persistent Volume Storage Class
   # If defined, storageClassName: <storageClass>
   # If set to "-", storageClassName: "", which disables dynamic provisioning
   # If undefined (the default) or set to null, no storageClassName spec is
@@ -53,7 +53,7 @@ persistentVolume:
   #
   storageClass: ""
 
-  # AnythingLLM storage data Persistent Volume Claim Selector
+  # Mind.Law storage data Persistent Volume Claim Selector
   # Useful if Persistent Volumes have been provisioned in advance
   # Ref: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#selector
   #
@@ -64,7 +64,7 @@ persistentVolume:
   #  matchExpressions:
   #    - { key: environment, operator: In, values: [ dev ] }
   
-  # AnythingLLM storage data Persistent Volume Name
+  # Mind.Law storage data Persistent Volume Name
   # Useful if Persistent Volumes have been provisioned in advance and you want to use a specific one
   #
   volumeName: ""
@@ -81,7 +81,7 @@ serviceAccount:
   name: ""
 
 # The Anything LLM application  deployment strategy
-# This is set to "Recreate" by default as AnythingLLM support is not yet
+# This is set to "Recreate" by default as Mind.Law support is not yet
 # production ready.  Once it is, this can be changed to "RollingUpdate"
 # Ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 #
@@ -109,9 +109,9 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-# AnythingLLM configuration options, these are stored in a ConfigMap and passed
+# Mind.Law configuration options, these are stored in a ConfigMap and passed
 # to the container as environment variables.
-# See https://github.com/Mintplex-Labs/anything-llm/blob/render/docker/.env.example
+# See https://github.com/Mintplex-Labs/mind-law/blob/render/docker/.env.example
 # for all available environment variables to use as configuration options
 #
 config:
@@ -226,6 +226,6 @@ extraObjects: []
 #     data:
 #       - secretKey: open_ai_key
 #         remoteRef:
-#           key: secret/data/anything-llm
+#           key: secret/data/mind-law
 #           property: open_ai_key
 
