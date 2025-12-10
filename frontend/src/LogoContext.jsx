@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import AnythingLLM from "./media/logo/anything-llm.png";
-import AnythingLLMDark from "./media/logo/anything-llm-dark.png";
+import MindLaw from "./media/logo/mind-law.png";
+import MindLawDark from "./media/logo/mind-law-dark.png";
 import DefaultLoginLogoLight from "./media/illustrations/login-logo.svg";
 import DefaultLoginLogoDark from "./media/illustrations/login-logo-light.svg";
 import System from "./models/system";
@@ -26,15 +26,15 @@ export function LogoProvider({ children }) {
         setIsCustomLogo(isCustomLogo);
       } else {
         localStorage.getItem("theme") !== "default"
-          ? setLogo(AnythingLLMDark)
-          : setLogo(AnythingLLM);
+          ? setLogo(MindLawDark)
+          : setLogo(MindLaw);
         setLoginLogo(DefaultLoginLogo);
         setIsCustomLogo(false);
       }
     } catch (err) {
       localStorage.getItem("theme") !== "default"
-        ? setLogo(AnythingLLMDark)
-        : setLogo(AnythingLLM);
+        ? setLogo(MindLawDark)
+        : setLogo(MindLaw);
       setLoginLogo(DefaultLoginLogo);
       setIsCustomLogo(false);
       console.error("Failed to fetch logo:", err);
