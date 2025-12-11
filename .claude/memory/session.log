@@ -1,0 +1,37 @@
+[2025-12-11 09:28:14] [INFO] === Session Start ===
+[2025-12-11 09:28:14] [INFO] Project root: /Users/tald/Projects/mind.law-platform
+[2025-12-11 09:28:14] [INFO] Memory directory ready: .claude/memory
+[2025-12-11 09:28:14] [INFO] Snapshot directory ready: .claude/memory/snapshots
+[2025-12-11 09:28:14] [INFO] Auto-created context.json from template with path: /Users/tald/.claude/plugins/marketplaces/cc10x/plugins/cc10x/skills/cc10x-orchestrator/SKILL.md
+[2025-12-11 09:28:14] [INFO] Auto-created .claude/context.json (required for orchestrator enforcement)
+[2025-12-11 09:28:14] [INFO] terminal-notifier found, notifications enabled
+[2025-12-11 09:28:14] [INFO] Directories initialized successfully
+[2025-12-11 09:28:14] [INFO] Session ID: 20251211_092814
+[2025-12-11 09:28:14] [INFO] Session initialized successfully
+[2025-12-11 09:28:14] [INFO] No working plan found, creating default
+[2025-12-11 09:28:14] [INFO] Default working plan created
+[2025-12-11 09:28:14] [INFO] No previous working plan found (created new one)
+[2025-12-11 09:28:14] [INFO] No remember file found
+[2025-12-11 09:28:14] [INFO] No REMEMBER.md found (optional context file)
+[2025-12-11 09:28:14] [INFO] No previous snapshots found
+[2025-12-11 09:28:14] [INFO] No previous snapshots (auto-healing will create them at 75% token usage)
+[2025-12-11 09:28:14] [INFO] Session metrics initialized
+[2025-12-11 09:28:14] [INFO] Session start complete
+[2025-12-11 09:28:14] [INFO] Ready for orchestration! 🚀
+[2025-12-11 09:39:57] [INFO] === Session Start ===
+[2025-12-11 09:39:57] [INFO] Project root: /Users/tald/Projects/mind.law-platform
+[2025-12-11 09:39:57] [INFO] Memory directory ready: .claude/memory
+[2025-12-11 09:39:57] [INFO] Snapshot directory ready: .claude/memory/snapshots
+[2025-12-11 09:39:57] [INFO] context.json already exists, skipping auto-setup
+[2025-12-11 09:39:57] [INFO] Directories initialized successfully
+[2025-12-11 09:39:57] [INFO] Session ID: 20251211_093957
+[2025-12-11 09:39:57] [INFO] Session initialized successfully
+[2025-12-11 09:39:57] [INFO] Working plan found: .claude/memory/WORKING_PLAN.md
+[2025-12-11 09:39:57] [INFO] Working plan loaded from previous session
+[2025-12-11 09:39:57] [INFO] No remember file found
+[2025-12-11 09:39:57] [INFO] No REMEMBER.md found (optional context file)
+[2025-12-11 09:39:57] [INFO] No previous snapshots found
+[2025-12-11 09:39:57] [INFO] No previous snapshots (auto-healing will create them at 75% token usage)
+[2025-12-11 09:39:57] [INFO] Session metrics initialized
+[2025-12-11 09:39:57] [INFO] Session start complete
+[2025-12-11 09:39:57] [INFO] Ready for orchestration! 🚀
