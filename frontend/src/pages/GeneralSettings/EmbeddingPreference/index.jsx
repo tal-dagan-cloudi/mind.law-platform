@@ -3,7 +3,7 @@ import Sidebar from "@/components/SettingsSidebar";
 import { isMobile } from "react-device-detect";
 import System from "@/models/system";
 import showToast from "@/utils/toast";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import OpenAiLogo from "@/media/llmprovider/openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
 import GeminiAiLogo from "@/media/llmprovider/gemini.png";
@@ -44,7 +44,7 @@ const EMBEDDERS = [
   {
     name: "Mind.Law Embedder",
     value: "native",
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
     options: (settings) => <NativeEmbeddingOptions settings={settings} />,
     description:
       "Use the built-in embedding provider for Mind.Law. Zero setup!",

@@ -4,14 +4,14 @@ import showToast from "@/utils/toast";
 import LLMItem from "@/components/LLMSelection/LLMItem";
 import { CaretUpDown, MagnifyingGlass, X } from "@phosphor-icons/react";
 import CTAButton from "@/components/lib/CTAButton";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import BrowserNative from "@/components/SpeechToText/BrowserNative";
 
 const PROVIDERS = [
   {
     name: "System native",
     value: "native",
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
     options: (settings) => <BrowserNative settings={settings} />,
     description: "Uses your browser's built in STT service if supported.",
   },

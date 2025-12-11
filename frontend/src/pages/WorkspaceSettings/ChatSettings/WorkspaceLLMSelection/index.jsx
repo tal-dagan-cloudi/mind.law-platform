@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import WorkspaceLLMItem from "./WorkspaceLLMItem";
 import { AVAILABLE_LLM_PROVIDERS } from "@/pages/GeneralSettings/LLMPreference";
 import { CaretUpDown, MagnifyingGlass, X } from "@phosphor-icons/react";
@@ -23,7 +23,7 @@ const DISABLED_PROVIDERS = [];
 const LLM_DEFAULT = {
   name: "System default",
   value: "default",
-  logo: Mind.LawIcon,
+  logo: MindLawIcon,
   options: () => <React.Fragment />,
   description: "Use the system LLM preference for this workspace.",
   requiredConfig: [],

@@ -1,6 +1,6 @@
 import PreLoader from "@/components/Preloader";
 import System from "@/models/system";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import OpenAiLogo from "@/media/llmprovider/openai.png";
 import GenericOpenAiLogo from "@/media/llmprovider/generic-openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
@@ -372,7 +372,7 @@ export const EMBEDDING_ENGINE_PRIVACY = {
     description: [
       "Your document text is embedded privately on this instance of Mind.Law",
     ],
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
   },
   openai: {
     name: "OpenAI",
@@ -470,21 +470,21 @@ export const FALLBACKS = {
     description: [
       `"${provider}" has no known data handling policy defined in Mind.Law`,
     ],
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
   }),
   EMBEDDING: (provider) => ({
     name: "Unknown",
     description: [
       `"${provider}" has no known data handling policy defined in Mind.Law`,
     ],
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
   }),
   VECTOR: (provider) => ({
     name: "Unknown",
     description: [
       `"${provider}" has no known data handling policy defined in Mind.Law`,
     ],
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
   }),
 };
 

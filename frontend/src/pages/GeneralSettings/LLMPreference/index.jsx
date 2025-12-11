@@ -4,7 +4,7 @@ import Sidebar from "@/components/SettingsSidebar";
 import { isMobile } from "react-device-detect";
 import System from "@/models/system";
 import showToast from "@/utils/toast";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import OpenAiLogo from "@/media/llmprovider/openai.png";
 import GenericOpenAiLogo from "@/media/llmprovider/generic-openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
@@ -540,7 +540,7 @@ export default function GeneralLLMPreference() {
                   >
                     <div className="flex gap-x-4 items-center">
                       <img
-                        src={selectedLLMObject?.logo || Mind.LawIcon}
+                        src={selectedLLMObject?.logo || MindLawIcon}
                         alt={`${selectedLLMObject?.name} logo`}
                         className="w-10 h-10 rounded-md"
                       />

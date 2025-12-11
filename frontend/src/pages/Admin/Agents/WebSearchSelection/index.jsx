@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Admin from "@/models/admin";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import GoogleSearchIcon from "./icons/google.png";
 import SerpApiIcon from "./icons/serpapi.png";
 import SearchApiIcon from "./icons/searchapi.png";
@@ -36,7 +36,7 @@ const SEARCH_PROVIDERS = [
   {
     name: "Please make a selection",
     value: "none",
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
     options: () => <React.Fragment />,
     description:
       "Web search will be disabled until a provider and keys are provided.",

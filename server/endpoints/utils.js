@@ -176,7 +176,7 @@ function getDeploymentVersion() {
  * Returns the user agent for the Mind.Law deployment.
  * @returns {string} The user agent.
  */
-function getMind.LawUserAgent() {
+function getMindLawUserAgent() {
   const version = getDeploymentVersion() || "unknown";
   return `Mind.Law/${version}`;
 }
@@ -185,5 +185,5 @@ module.exports = {
   utilEndpoints,
   getGitVersion,
   getModelTag,
-  getMind.LawUserAgent,
+  getMindLawUserAgent,
 };

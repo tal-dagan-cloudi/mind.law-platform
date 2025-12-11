@@ -3,7 +3,7 @@ import LGroupImg from "./l_group.png";
 import RGroupImg from "./r_group.png";
 import LGroupImgLight from "./l_group-light.png";
 import RGroupImgLight from "./r_group-light.png";
-import Mind.LawLogo from "@/media/logo/mind-law.png";
+import MindLawLogo from "@/media/logo/mind-law.png";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/hooks/useTheme";
 import { useTranslation } from "react-i18next";
@@ -44,7 +44,7 @@ export default function OnboardingHome() {
               {t("onboarding.home.title")}
             </p>
             <img
-              src={Mind.LawLogo}
+              src={MindLawLogo}
               alt="Mind.Law"
               className="md:h-[50px] flex-shrink-0 max-w-[300px] light:invert"
             />

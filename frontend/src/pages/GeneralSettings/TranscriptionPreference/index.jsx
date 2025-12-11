@@ -5,7 +5,7 @@ import System from "@/models/system";
 import showToast from "@/utils/toast";
 import PreLoader from "@/components/Preloader";
 import OpenAiLogo from "@/media/llmprovider/openai.png";
-import Mind.LawIcon from "@/media/logo/mind-law-icon.png";
+import MindLawIcon from "@/media/logo/mind-law-icon.png";
 import OpenAiWhisperOptions from "@/components/TranscriptionSelection/OpenAiOptions";
 import NativeTranscriptionOptions from "@/components/TranscriptionSelection/NativeTranscriptionOptions";
 import LLMItem from "@/components/LLMSelection/LLMItem";
@@ -24,7 +24,7 @@ const PROVIDERS = [
   {
     name: "Mind.Law Built-In",
     value: "local",
-    logo: Mind.LawIcon,
+    logo: MindLawIcon,
     options: (settings) => <NativeTranscriptionOptions settings={settings} />,
     description: "Run a built-in whisper model on this instance privately.",
   },
